@@ -1,0 +1,212 @@
+[
+ {
+  "system": "bilayer_chol",
+  "tool": "LeafletFinder 15 \u00c5",
+  "time_ms": 223.5028019999845,
+  "accuracy": 0.9974279835390947,
+  "n_ref": 1944,
+  "n_errors": 5,
+  "n_unassigned": 4,
+  "cutoff": 1.5
+ },
+ {
+  "system": "bilayer_chol",
+  "tool": "LeafletFinder seuil optimis\u00e9",
+  "time_ms": 5825.83803,
+  "accuracy": 0.9974279835390947,
+  "n_ref": 1944,
+  "n_errors": 5,
+  "n_unassigned": 4,
+  "cutoff": 1.5
+ },
+ {
+  "system": "bilayer_chol",
+  "tool": "FATSLiM",
+  "time_ms": 238.55620400001953,
+  "accuracy": 1.0,
+  "n_ref": 1944,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "frame_ms": 34.0
+ },
+ {
+  "system": "bilayer_peptide",
+  "tool": "LeafletFinder 15 \u00c5",
+  "time_ms": 4.381297999998424,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.5
+ },
+ {
+  "system": "bilayer_peptide",
+  "tool": "LeafletFinder seuil optimis\u00e9",
+  "time_ms": 149.0454370000407,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.0
+ },
+ {
+  "system": "bilayer_peptide",
+  "tool": "FATSLiM",
+  "time_ms": 186.79405900002166,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "frame_ms": 9.0
+ },
+ {
+  "system": "bilayer_prot",
+  "tool": "LeafletFinder 15 \u00c5",
+  "time_ms": 2.164613999980247,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.5
+ },
+ {
+  "system": "bilayer_prot",
+  "tool": "LeafletFinder seuil optimis\u00e9",
+  "time_ms": 118.74432499996601,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.0
+ },
+ {
+  "system": "bilayer_prot",
+  "tool": "FATSLiM",
+  "time_ms": 182.52986400000282,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "frame_ms": 8.0
+ },
+ {
+  "system": "model_vesicle",
+  "tool": "LeafletFinder 15 \u00c5",
+  "time_ms": 81.17218600000342,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.5
+ },
+ {
+  "system": "model_vesicle",
+  "tool": "LeafletFinder seuil optimis\u00e9",
+  "time_ms": 6191.654621999987,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.5
+ },
+ {
+  "system": "model_vesicle",
+  "tool": "FATSLiM",
+  "time_ms": 236.01365800004714,
+  "accuracy": 0.0,
+  "n_ref": 2748,
+  "n_errors": 2748,
+  "n_unassigned": 2748,
+  "frame_ms": NaN
+ },
+ {
+  "system": "dppc_vesicle",
+  "tool": "LeafletFinder 15 \u00c5",
+  "time_ms": 138.06369600001744,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.5
+ },
+ {
+  "system": "dppc_vesicle",
+  "tool": "LeafletFinder seuil optimis\u00e9",
+  "time_ms": 8295.489599999997,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.5
+ },
+ {
+  "system": "dppc_vesicle",
+  "tool": "FATSLiM",
+  "time_ms": 219.45169799994346,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "frame_ms": 53.0
+ },
+ {
+  "system": "small_plasma_membrane",
+  "tool": "LeafletFinder 15 \u00c5",
+  "time_ms": 361.75326300008237,
+  "accuracy": 0.5156062424969988,
+  "n_ref": 6664,
+  "n_errors": 3228,
+  "n_unassigned": 38,
+  "cutoff": 1.5
+ },
+ {
+  "system": "small_plasma_membrane",
+  "tool": "LeafletFinder seuil optimis\u00e9",
+  "time_ms": 22576.186125999924,
+  "accuracy": 0.9845438175270108,
+  "n_ref": 6664,
+  "n_errors": 103,
+  "n_unassigned": 99,
+  "cutoff": 1.2
+ },
+ {
+  "system": "small_plasma_membrane",
+  "tool": "FATSLiM",
+  "time_ms": 337.0223720000922,
+  "accuracy": 0.9981992797118847,
+  "n_ref": 6664,
+  "n_errors": 12,
+  "n_unassigned": 1,
+  "frame_ms": 70.0
+ },
+ {
+  "system": "large_plasma_membrane",
+  "tool": "LeafletFinder 15 \u00c5",
+  "time_ms": 2674.1910820001067,
+  "accuracy": 0.5146837153698217,
+  "n_ref": 19239,
+  "n_errors": 9337,
+  "n_unassigned": 81,
+  "cutoff": 1.5
+ },
+ {
+  "system": "large_plasma_membrane",
+  "tool": "LeafletFinder seuil optimis\u00e9",
+  "time_ms": 138914.80082599993,
+  "accuracy": 0.9819117417745205,
+  "n_ref": 19239,
+  "n_errors": 348,
+  "n_unassigned": 343,
+  "cutoff": 1.15
+ },
+ {
+  "system": "large_plasma_membrane",
+  "tool": "FATSLiM",
+  "time_ms": 489.746365999963,
+  "accuracy": 0.0,
+  "n_ref": 19239,
+  "n_errors": 19239,
+  "n_unassigned": 19239,
+  "frame_ms": NaN
+ }
+]
