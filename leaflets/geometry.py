@@ -43,40 +43,59 @@ def wrap(xyz: np.ndarray, box: np.ndarray) -> np.ndarray:
     return f @ box
 
 
+class PeriodicTree:
+    """cKDTree périodique pour une boîte quelconque.
+
+    ``idx[k]`` donne l'indice original du k-ième point de l'arbre (les images
+    périodiques ajoutées dans le halo pointent vers le point d'origine).
+    """
+
+    def __init__(self, points, box, cutoff):
+        self.box = box
+        n = len(points)
+        p = wrap(points, box)
+        if is_orthorhombic(box):
+            L = np.diag(box)
+            p = np.minimum(p, np.nextafter(L, 0))
+            self.tree = cKDTree(p, boxsize=L)
+            self.idx = np.arange(n)
+            self.halo = False
+        else:
+            f = p @ np.linalg.inv(box)
+            heights = np.abs(np.linalg.det(box)) / np.linalg.norm(
+                np.cross(box[[1, 2, 0]], box[[2, 0, 1]]), axis=1)
+            margin = cutoff / heights
+            xs, ids = [p], [np.arange(n)]
+            for sh in np.array(np.meshgrid([-1, 0, 1], [-1, 0, 1], [-1, 0, 1])).T.reshape(-1, 3):
+                if not sh.any():
+                    continue
+                g = f + sh
+                m = np.all((g > -margin) & (g < 1 + margin), axis=1)
+                if m.any():
+                    xs.append(g[m] @ box)
+                    ids.append(np.flatnonzero(m))
+            self.tree = cKDTree(np.concatenate(xs))
+            self.idx = np.concatenate(ids)
+            self.halo = True
+        self.points = p
+
+    def query_points(self, q):
+        """Points de requête ramenés dans le repère de l'arbre."""
+        q = wrap(q, self.box)
+        if not self.halo:
+            q = np.minimum(q, np.nextafter(np.diag(self.box), 0))
+        return q
+
+
 def pairs_within(points: np.ndarray, box: np.ndarray, cutoff: float, return_vectors=False):
     """Toutes les paires (i < j) à distance < cutoff, avec PBC.
 
     Renvoie (i, j, dist) et optionnellement les vecteurs d_ij = x_j - x_i (image minimale).
     """
-    n = len(points)
-    if is_orthorhombic(box):
-        L = np.diag(box)
-        p = wrap(points, box)
-        p = np.minimum(p, np.nextafter(L, 0))
-        tree = cKDTree(p, boxsize=L)
-        pr = tree.query_pairs(cutoff, output_type="ndarray")
-    else:
-        p = wrap(points, box)
-        inv = np.linalg.inv(box)
-        f = p @ inv
-        # épaisseur du halo en coordonnées fractionnaires, par direction
-        heights = np.abs(np.linalg.det(box)) / np.linalg.norm(
-            np.cross(box[[1, 2, 0]], box[[2, 0, 1]]), axis=1)
-        margin = cutoff / heights
-        imgs_x, imgs_i = [p], [np.arange(n)]
-        for sh in np.array(np.meshgrid([-1, 0, 1], [-1, 0, 1], [-1, 0, 1])).T.reshape(-1, 3):
-            if not sh.any():
-                continue
-            g = f + sh
-            m = np.all((g > -margin) & (g < 1 + margin), axis=1)
-            if m.any():
-                imgs_x.append(g[m] @ box)
-                imgs_i.append(np.flatnonzero(m))
-        allx = np.concatenate(imgs_x)
-        alli = np.concatenate(imgs_i)
-        tree = cKDTree(allx)
-        pr = tree.query_pairs(cutoff, output_type="ndarray")
-        pr = alli[pr]
+    t = PeriodicTree(points, box, cutoff)
+    pr = t.tree.query_pairs(cutoff, output_type="ndarray")
+    if t.halo:
+        pr = t.idx[pr]
         pr = pr[pr[:, 0] != pr[:, 1]]
         pr.sort(axis=1)
         pr = np.unique(pr, axis=0)

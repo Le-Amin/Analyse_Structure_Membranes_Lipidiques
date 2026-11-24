@@ -14,6 +14,8 @@ leaflets/          paquet Python
   graph.py         composantes connexes + recherche automatique du seuil (union-find)
   evaluate.py      comparaison avec les fichiers leaflets.txt de référence
   v1_graph.py      V1 : graphe + seuil automatique
+  v2_autoref.py    V2 : détection automatique de l'atome de tête (densité lipidique)
+  v3_normals.py    V3 : orientation des lipides + normales locales (ACP)
 scripts/           scripts de benchmark et de comparaison
 results/           résultats (tableaux, figures)
 ```
