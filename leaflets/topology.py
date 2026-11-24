@@ -37,10 +37,28 @@ class Lipids:
         return self.stop - self.start
 
 
-def find_lipids(s: Structure, lipid_names=None) -> Lipids:
+def molecule_starts(s: Structure) -> np.ndarray:
+    """Indices du premier atome de chaque molécule.
+
+    En général une molécule = un résidu. Mais certains lipides sont découpés en
+    plusieurs résidus (ex. glucosylcéramide Martini 3 : sucre = résidu 1,
+    céramide = résidu 2, site virtuel = résidu 1). On ne commence donc une
+    nouvelle molécule que si le nom de résidu change, ou si l'atome porte le même
+    nom que le premier atome du premier résidu de ce type (le « modèle »).
+    """
+    rn = s.resname
+    uniq, first, inv = np.unique(rn, return_index=True, return_inverse=True)
+    tmpl = s.name[first][inv]          # nom du 1er atome du type de résidu
+    new = np.r_[True, rn[1:] != rn[:-1]] | (s.name == tmpl)
+    return np.flatnonzero(new)
+
+
+def find_lipids(s: Structure, lipid_names=None, exclude=None) -> Lipids:
     """Les lipides sont les résidus qui ne sont ni eau/ions ni acides aminés
-    (ou ceux dont le nom est dans ``lipid_names``) et qui ont au moins 2 atomes."""
-    change = np.flatnonzero(np.r_[True, s.resindex[1:] != s.resindex[:-1]])
+    (ou ceux dont le nom est dans ``lipid_names``) et qui ont au moins 2 atomes.
+    ``exclude`` : noms de résidus à ignorer en plus (p.ex. la partie lipidique
+    d'un lipopeptide comme la surfactine, ``S14``)."""
+    change = molecule_starts(s)
     starts = change
     stops = np.r_[change[1:], s.n_atoms]
     rnames = s.resname[starts]
@@ -49,6 +67,8 @@ def find_lipids(s: Structure, lipid_names=None) -> Lipids:
     else:
         excl = np.array(sorted(WATER_IONS | AMINO_ACIDS))
         keep = ~np.isin(rnames, excl) & ((stops - starts) >= 2)
+    if exclude:
+        keep &= ~np.isin(rnames, list(exclude))
     starts, stops, rnames = starts[keep], stops[keep], rnames[keep]
     sizes = stops - starts
     atom_lipid = np.repeat(np.arange(len(starts)), sizes)

@@ -1,0 +1,422 @@
+[
+ {
+  "system": "bilayer_chol",
+  "variant": "V1 noms + seuil auto",
+  "time_ms": 22.390647999941393,
+  "accuracy": 0.9974279835390947,
+  "n_ref": 1944,
+  "n_errors": 5,
+  "n_unassigned": 4,
+  "cutoff": 1.5447492728077097
+ },
+ {
+  "system": "bilayer_chol",
+  "variant": "V2 t\u00eate auto + seuil auto",
+  "time_ms": 20.887588000050528,
+  "accuracy": 0.9979423868312757,
+  "n_ref": 1944,
+  "n_errors": 4,
+  "n_unassigned": 3,
+  "cutoff": 1.515771401851683
+ },
+ {
+  "system": "bilayer_chol",
+  "variant": "V3 sans filtre plan/inclinaison",
+  "time_ms": 33.21703400001752,
+  "accuracy": 0.9989711934156379,
+  "n_ref": 1944,
+  "n_errors": 2,
+  "n_unassigned": 0,
+  "cutoff": 2.471622354621383
+ },
+ {
+  "system": "bilayer_chol",
+  "variant": "V3 compl\u00e8te (ACP, seuil auto)",
+  "time_ms": 37.555319000034615,
+  "accuracy": 0.9984567901234568,
+  "n_ref": 1944,
+  "n_errors": 3,
+  "n_unassigned": 0,
+  "cutoff": 2.9385583060828644
+ },
+ {
+  "system": "bilayer_chol",
+  "variant": "V4 ACP, seuil fixe",
+  "time_ms": 19.79717899996558,
+  "accuracy": 0.9979423868312757,
+  "n_ref": 1944,
+  "n_errors": 4,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "bilayer_chol",
+  "variant": "V4 normale moyenne, seuil fixe",
+  "time_ms": 17.27154699995026,
+  "accuracy": 0.9979423868312757,
+  "n_ref": 1944,
+  "n_errors": 4,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "bilayer_peptide",
+  "variant": "V1 noms + seuil auto",
+  "time_ms": 1.3868839999986449,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.538738688036123
+ },
+ {
+  "system": "bilayer_peptide",
+  "variant": "V2 t\u00eate auto + seuil auto",
+  "time_ms": 1.261821000070995,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.3198343600094933
+ },
+ {
+  "system": "bilayer_peptide",
+  "variant": "V3 sans filtre plan/inclinaison",
+  "time_ms": 2.5126760000375725,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.9945894762325622
+ },
+ {
+  "system": "bilayer_peptide",
+  "variant": "V3 compl\u00e8te (ACP, seuil auto)",
+  "time_ms": 2.9059409999945274,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.9945894762325622
+ },
+ {
+  "system": "bilayer_peptide",
+  "variant": "V4 ACP, seuil fixe",
+  "time_ms": 2.6527539999960936,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "bilayer_peptide",
+  "variant": "V4 normale moyenne, seuil fixe",
+  "time_ms": 2.0691010000746246,
+  "accuracy": 1.0,
+  "n_ref": 126,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "bilayer_prot",
+  "variant": "V1 noms + seuil auto",
+  "time_ms": 1.1946790000365581,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.72329354109877
+ },
+ {
+  "system": "bilayer_prot",
+  "variant": "V2 t\u00eate auto + seuil auto",
+  "time_ms": 0.9058859999413471,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.7438156002715361
+ },
+ {
+  "system": "bilayer_prot",
+  "variant": "V3 sans filtre plan/inclinaison",
+  "time_ms": 2.1719560000974525,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0573024313602084
+ },
+ {
+  "system": "bilayer_prot",
+  "variant": "V3 compl\u00e8te (ACP, seuil auto)",
+  "time_ms": 2.4797769999622687,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0573024313602084
+ },
+ {
+  "system": "bilayer_prot",
+  "variant": "V4 ACP, seuil fixe",
+  "time_ms": 2.7111509999713235,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "bilayer_prot",
+  "variant": "V4 normale moyenne, seuil fixe",
+  "time_ms": 2.0280899999534086,
+  "accuracy": 1.0,
+  "n_ref": 112,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "model_vesicle",
+  "variant": "V1 noms + seuil auto",
+  "time_ms": 35.541077000061705,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.9004101022701603
+ },
+ {
+  "system": "model_vesicle",
+  "variant": "V2 t\u00eate auto + seuil auto",
+  "time_ms": 23.391227000047365,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.9213368604810166
+ },
+ {
+  "system": "model_vesicle",
+  "variant": "V3 sans filtre plan/inclinaison",
+  "time_ms": 43.55134700006147,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.9213368604810166
+ },
+ {
+  "system": "model_vesicle",
+  "variant": "V3 compl\u00e8te (ACP, seuil auto)",
+  "time_ms": 51.356306000002405,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 1.9213368604810166
+ },
+ {
+  "system": "model_vesicle",
+  "variant": "V4 ACP, seuil fixe",
+  "time_ms": 33.30976000006558,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "model_vesicle",
+  "variant": "V4 normale moyenne, seuil fixe",
+  "time_ms": 26.30069800000001,
+  "accuracy": 1.0,
+  "n_ref": 2748,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "dppc_vesicle",
+  "variant": "V1 noms + seuil auto",
+  "time_ms": 74.05880299995715,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.3183664491817106
+ },
+ {
+  "system": "dppc_vesicle",
+  "variant": "V2 t\u00eate auto + seuil auto",
+  "time_ms": 67.52779299995382,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.223467110435549
+ },
+ {
+  "system": "dppc_vesicle",
+  "variant": "V3 sans filtre plan/inclinaison",
+  "time_ms": 86.3675159999957,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.162779940855182
+ },
+ {
+  "system": "dppc_vesicle",
+  "variant": "V3 compl\u00e8te (ACP, seuil auto)",
+  "time_ms": 87.71411500003978,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.162779940855182
+ },
+ {
+  "system": "dppc_vesicle",
+  "variant": "V4 ACP, seuil fixe",
+  "time_ms": 43.86365499999556,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "dppc_vesicle",
+  "variant": "V4 normale moyenne, seuil fixe",
+  "time_ms": 39.006176000043524,
+  "accuracy": 1.0,
+  "n_ref": 3030,
+  "n_errors": 0,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "small_plasma_membrane",
+  "variant": "V1 noms + seuil auto",
+  "time_ms": 59.81322299999192,
+  "accuracy": 0.9849939975990396,
+  "n_ref": 6664,
+  "n_errors": 100,
+  "n_unassigned": 96,
+  "cutoff": 1.2279842062257011
+ },
+ {
+  "system": "small_plasma_membrane",
+  "variant": "V2 t\u00eate auto + seuil auto",
+  "time_ms": 69.61651999995411,
+  "accuracy": 0.9836434573829532,
+  "n_ref": 6664,
+  "n_errors": 109,
+  "n_unassigned": 105,
+  "cutoff": 1.225936589097215
+ },
+ {
+  "system": "small_plasma_membrane",
+  "variant": "V3 sans filtre plan/inclinaison",
+  "time_ms": 109.32756600004723,
+  "accuracy": 0.9966986794717887,
+  "n_ref": 6664,
+  "n_errors": 22,
+  "n_unassigned": 0,
+  "cutoff": 2.494109017518137
+ },
+ {
+  "system": "small_plasma_membrane",
+  "variant": "V3 compl\u00e8te (ACP, seuil auto)",
+  "time_ms": 149.30018500001552,
+  "accuracy": 0.9971488595438175,
+  "n_ref": 6664,
+  "n_errors": 19,
+  "n_unassigned": 0,
+  "cutoff": 2.957982853122765
+ },
+ {
+  "system": "small_plasma_membrane",
+  "variant": "V4 ACP, seuil fixe",
+  "time_ms": 76.34184899995944,
+  "accuracy": 0.9966986794717887,
+  "n_ref": 6664,
+  "n_errors": 22,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "small_plasma_membrane",
+  "variant": "V4 normale moyenne, seuil fixe",
+  "time_ms": 54.37613300000521,
+  "accuracy": 0.9972989195678271,
+  "n_ref": 6664,
+  "n_errors": 18,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "large_plasma_membrane",
+  "variant": "V1 noms + seuil auto",
+  "time_ms": 175.1180060000479,
+  "accuracy": 0.9826914080773429,
+  "n_ref": 19239,
+  "n_errors": 333,
+  "n_unassigned": 328,
+  "cutoff": 1.1635071895553413
+ },
+ {
+  "system": "large_plasma_membrane",
+  "variant": "V2 t\u00eate auto + seuil auto",
+  "time_ms": 170.89993300010065,
+  "accuracy": 0.9808202089505692,
+  "n_ref": 19239,
+  "n_errors": 369,
+  "n_unassigned": 363,
+  "cutoff": 1.187202579209517
+ },
+ {
+  "system": "large_plasma_membrane",
+  "variant": "V3 sans filtre plan/inclinaison",
+  "time_ms": 345.42945000009695,
+  "accuracy": 0.9978169343520973,
+  "n_ref": 19239,
+  "n_errors": 42,
+  "n_unassigned": 0,
+  "cutoff": 1.7057538342139247
+ },
+ {
+  "system": "large_plasma_membrane",
+  "variant": "V3 compl\u00e8te (ACP, seuil auto)",
+  "time_ms": 382.86677799999325,
+  "accuracy": 0.9972971568168824,
+  "n_ref": 19239,
+  "n_errors": 52,
+  "n_unassigned": 0,
+  "cutoff": 2.8934938105352326
+ },
+ {
+  "system": "large_plasma_membrane",
+  "variant": "V4 ACP, seuil fixe",
+  "time_ms": 281.57468300003075,
+  "accuracy": 0.9972451790633609,
+  "n_ref": 19239,
+  "n_errors": 53,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ },
+ {
+  "system": "large_plasma_membrane",
+  "variant": "V4 normale moyenne, seuil fixe",
+  "time_ms": 182.07639700005984,
+  "accuracy": 0.9974530900774469,
+  "n_ref": 19239,
+  "n_errors": 49,
+  "n_unassigned": 0,
+  "cutoff": 2.0
+ }
+]
